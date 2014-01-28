@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest package="org.kde.necessitas.example.snowloadcount" android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1">
+    <application android:label="@string/app_name" android:name="org.kde.necessitas.origo.QtApplication" android:icon="@drawable/icon">
+        <activity android:label="@string/app_name" android:name="org.kde.necessitas.origo.QtActivity" android:configChanges="orientation|locale|fontScale|keyboard|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:resource="@array/qt_libs" android:name="android.app.qt_libs_resource_id"/>
+            <meta-data android:resource="@array/bundled_libs" android:name="android.app.bundled_libs_resource_id"/>
+            <meta-data android:value="snowloadcount" android:name="android.app.lib_name"/>
+            <!--  Messages maps -->
+            <meta-data android:value="@string/ministro_not_found_msg" android:name="android.app.ministro_not_found_msg"/>
+            <meta-data android:value="@string/ministro_needed_msg" android:name="android.app.ministro_needed_msg"/>
+            <meta-data android:value="@string/fatal_error_msg" android:name="android.app.fatal_error_msg"/>
+            <!--  Messages maps -->
+            <!-- Splash screen -->
+            <meta-data android:resource="@layout/splash" android:name="android.app.splash_screen"/>
+            <!-- Splash screen -->
+        </activity>
+    </application>
+    <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:anyDensity="true"/>
+    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="17"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+     <uses-permission android:name="android.permission.READ_SMS"/>
+     <uses-permission android:name="android.permission.BROADCAST_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+</manifest>
